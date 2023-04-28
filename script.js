@@ -111,8 +111,8 @@ function waitAndResponce(inputText) {
             clearChat();
             break;
 
-        case "new":
-            sendTextMessage(addressString);
+        case "return":
+            back();
             break;
 
         default:
@@ -131,6 +131,21 @@ function clearChat() {
     waitAndResponce('intro');
 }
 
+function getCurrentURL() {
+    return window.location.href
+}
+
+
+function back() {
+    document.getElementById("listUL").innerHTML = "";
+    if (window.confirm("Do you really want to return to ?")) {
+        history.back();
+        const url = getCurrentURL();
+        if (url == "https://chatbot-razouk.vercel.app/") {
+            window.alert("In case the functionality encounters an issue, kindly refresh the page. If the problem persists, please do not hesitate to contact us for assistance. We appreciate your valuable feedback!")
+        }
+    }
+}
 
 
 function sendTextMessage(textToSend) {
