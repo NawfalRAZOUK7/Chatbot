@@ -80,7 +80,7 @@ function waitAndResponce(inputText) {
             }, 2000);
             break;
         case "help":
-            sendTextMessage("<span class='sk'>Send Keyword to get what you want to know about me...<br>e.g<br><span class='bold'>'resume'</span> - to get my resume<br><span class='bold'>'portfolio'</span> - to check my portfolio<br><span class='bold'>'social'</span> - to get my social links<br><span class='bold'>'adress'</span> - to get my location<br><span class='bold'>'more'</span> - to check my github profile<br><span class='bold'>'clear'</span> - to clear conversation</span>");
+            sendTextMessage("<span class='sk'>Send Keyword to get what you want to know about me...<br>e.g<br><span class='bold'>'resume'</span> - to get my resume<br><span class='bold'>'portfolio'</span> - to check my portfolio<br><span class='bold'>'social'</span> - to get my social links<br><span class='bold'>'adress'</span> - to get my location<br><span class='bold'>'more'</span> - to check my github profile<br><span class='bold'>'clear'</span> - to clear conversation</span><span class='bold'>'return'</span> - to return to the ex window.</span>");
             break;
 
         case "resume":
@@ -132,7 +132,7 @@ function clearChat() {
 }
 
 function getCurrentURL() {
-    return window.location.href
+    return window.location.href;
 }
 
 
