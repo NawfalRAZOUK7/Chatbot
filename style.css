@@ -360,6 +360,7 @@ footer{
     body{
         margin: auto;
         width: 50vw;
+        background: url('images/background2.jpg') no-repeat;
     }
 
     .sendBar{
