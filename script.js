@@ -4,8 +4,7 @@ var resumeString = "<img src='images/resume.png' class='resumeThumbnail'><div cl
 var addressString = "<div class='mapview'><iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.7647891568276!2d-6.859423293344735!3d33.99857484761788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76cf3277d1491%3A0x8c3ffba683de412!2sAnnexe%20de%20l&#39;ENIM%2C%20Rabat!5e0!3m2!1sfr!2sma!4v1676323639248!5m2!1sfr!2sma' class='map'></iframe></div><label class='add'><address>Rue Mohamed Bel Hassan Al Wazani<br>Agdal<br>Rabat, MOROCCO 10106</address>";
 
 var portfolio = "<img src='images/portfolio.png' class='resumeThumbnail'><div class='downloadSpace'><div class='pdfname'><label>Nawfal RAZOUK | Portfolio</label></div><a target='_blank' href='https://www.nawfalrazouk.live'><img class='download' src='images/go.svg' alt=''></a></div>";
-
-var plateform = "It's not finished yet!";
+var plateform = "<img src='images/Github-profile.jpg' class='resumeThumbnail'><div class='downloadSpace'><div class='pdfname'><label>Nawfal RAZOUK | Github</label></div><a target='_blank' href='https://github.com/NawfalRAZOUK7'><img class='download' src='images/go.svg' alt=''></a></div>";
 
 function startFunction() {
     setLastSeen();
@@ -81,7 +80,7 @@ function waitAndResponce(inputText) {
             }, 2000);
             break;
         case "help":
-            sendTextMessage("<span class='sk'>Send Keyword to get what you want to know about me...<br>e.g<br><span class='bold'>'resume'</span> - to get my resume<br><span class='bold'>'portfolio'</span> - to check my portfolio<br><span class='bold'>'social'</span> - to get my social links<br><span class='bold'>'adress'</span> - to get my location<br><span class='bold'>'more'</span> - to check my personal platefrom<br><span class='bold'>'clear'</span> - to clear conversation</span>");
+            sendTextMessage("<span class='sk'>Send Keyword to get what you want to know about me...<br>e.g<br><span class='bold'>'resume'</span> - to get my resume<br><span class='bold'>'portfolio'</span> - to check my portfolio<br><span class='bold'>'social'</span> - to get my social links<br><span class='bold'>'adress'</span> - to get my location<br><span class='bold'>'more'</span> - to check my github profile<br><span class='bold'>'clear'</span> - to clear conversation</span>");
             break;
 
         case "resume":
