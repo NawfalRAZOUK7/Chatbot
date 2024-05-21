@@ -1,6 +1,7 @@
 var audio = new Audio('assets/sentmessage.mp3');
 var contactString = "<div class='social'> <a target='_blank' href='tel:+212708051744'> <div class='socialItem' id='call'><img class='socialItemI' src='images/phone.svg'/><label class='number'>(212) 70805-1744</label></div> </a> <a href='mailto:nawfal.razouk@enim.ac.ma'> <div class='socialItem'><img class='socialItemI' src='images/gmail.svg' alt=''></div> </a> <a target='_blank' href='https://github.com/NawfalRAZOUK7'> <div class='socialItem'><img class='socialItemI' src='images/github.svg' alt=''></div> </a> <a target='_blank' href='https://wa.me/212708051744'> <div class='socialItem'><img class='socialItemI' src='images/whatsapp.svg' alt=''></div> </a> <a target='_blank' href='https://t.me/nawfalrazouk'> <div class='socialItem'><img class='socialItemI' src='images/telegram.svg' alt=''></div> </a> <a target='_blank' href='https://www.instagram.com/nawfalrazouk7/'> <div class='socialItem'><img class='socialItemI' src='images/instagram.svg' alt=''> </div> </a> <a href='https://www.linkedin.com/in/nawfal-razouk/' target='_blank' rel='noopener noreferrer'> <div class='socialItem'><img class='socialItemI' src='images/linkedin.svg' alt=''></div> </a> </div>";
-var resumeString = "<img src='images/resume.png' class='resumeThumbnail'><div class='downloadSpace'><div class='pdfname'><img src='images/pdf.png'><label>RAZOUK Nawfal Resume.pdf</label></div><a href='assets/CV RAZOUK.pdf' download='RAZOUK_Nawfal_Resume.pdf'><img class='download' src='images/downloadIcon.svg'></a></div>";
+var resumeString = "<img src='images/resume.png' class='resumeThumbnail'><div class='downloadSpace'><div class='pdfname'><img src='images/pdf.png'><label>RAZOUK Nawfal Resume.pdf</label></div><a href='assets/CV.pdf' download='RAZOUK_Nawfal_Resume.pdf'><img class='download' src='images/downloadIcon.svg'></a></div>";
+var resumeCanadien = "<img src='images/canadien.png' class='resumeThumbnail'><div class='downloadSpace'><div class='pdfname'><img src='images/pdf.png'><label>RAZOUK Nawfal Resume Canadien.pdf</label></div><a href='assets/Nawfal.pdf' download='RAZOUK_Nawfal_Resume.pdf'><img class='download' src='images/downloadIcon.svg'></a></div>";
 var addressString = "<div class='mapview'><iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.7647891568276!2d-6.859423293344735!3d33.99857484761788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76cf3277d1491%3A0x8c3ffba683de412!2sAnnexe%20de%20l&#39;ENIM%2C%20Rabat!5e0!3m2!1sfr!2sma!4v1676323639248!5m2!1sfr!2sma' class='map'></iframe></div><label class='add'><address>Rue Mohamed Bel Hassan Al Wazani<br>Agdal<br>Rabat, MOROCCO 10106</address>";
 
 var portfolio = "<img src='images/portfolio.png' class='resumeThumbnail'><div class='downloadSpace'><div class='pdfname'><label>Nawfal RAZOUK | Portfolio</label></div><a target='_blank' href='https://portfolio-nawfalrazouk7.vercel.app/'><img class='download' src='images/go.svg' alt=''></a></div>";
@@ -80,11 +81,15 @@ function waitAndResponce(inputText) {
             }, 2000);
             break;
         case "help":
-            sendTextMessage("<span class='sk'>Send Keyword to get what you want to know about me...<br>e.g<br><span class='bold'>'resume'</span> - to get my resume<br><span class='bold'>'portfolio'</span> - to check my portfolio<br><span class='bold'>'social'</span> - to get my social links<br><span class='bold'>'adress'</span> - to get my location<br><span class='bold'>'more'</span> - to check my github profile<br><span class='bold'>'clear'</span> - to clear conversation<br><span class='bold'>'return'</span> - to return to the ex window.</span>");
+            sendTextMessage("<span class='sk'>Send Keyword to get what you want to know about me...<br>e.g<br><span class='bold'>'resume'</span> - to get my resume<br><span class='bold'>'resume canadien'</span> - to get my canadien resume<br><span class='bold'>'portfolio'</span> - to check my portfolio<br><span class='bold'>'social'</span> - to get my social links<br><span class='bold'>'adress'</span> - to get my location<br><span class='bold'>'more'</span> - to check my github profile<br><span class='bold'>'clear'</span> - to clear conversation<br><span class='bold'>'return'</span> - to return to the ex window.</span>");
             break;
 
         case "resume":
             sendTextMessage(resumeString);
+            break;
+        
+        case "resume canadien":
+            sendTextMessage(resumeCanadien);
             break;
 
         case "portfolio":
